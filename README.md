@@ -7,4 +7,7 @@ Built with w3.css and fontawesome
 ##Dependencies
 Pycld2
 
+###Link
+http://langdetect.pythonanywhere.com/
+
 
