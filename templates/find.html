@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset ="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Language Detector</title>
+		<link href="{{ url_for('static',filename='css/w3.css') }}" rel="stylesheet">
+		<link href="{{ url_for('static',filename='css/font-awesome.min.css') }}" rel="stylesheet">
+		
+		
+	</head>
+	<body>
+		<header class="w3-container w3-green" >
+			<a  style="font-size:30px;text-decoration:none" href="/">Home<a>
+				<div class="w3-center">
+					<h1>Language Detector</h1>
+				</header>
+			</div>
+			
+			<p style="font-size:50px" class="w3-center"><i class="fa fa-comments-o"></i>Results</p>
+			{% if lang=='Unknown' %}
+				<p style="font-size:35px" class="w3-center" >
+					<i class=" fa fa-frown-o"></i>
+				</p>
+				<p  style="font-size:35px" class="w3-center" >
+					Could not detect any language<br/>
+					The laguage is not in the database or<br/>
+					your sentence is too short.
+				</p>
+			{% endif %}
+			
+			{% if lang != 'Unknown' %}
+				<div class="container">
+					<ul class="w3-ul w3-large">
+						<p style="font-size:35px" class="w3-center" >
+							<i class=" fa fa-smile-o"></i>
+						</p>
+						<li><b>Language detected  {{lang}}</b></li>
+						<li><b>Reliablity: {{reliability}}</b></li>
+						<li><b>Probable Match : {{match}}</b></li>
+					</ul>
+				</div>
+			{% endif %}
+			
+			<body>
+			</html>

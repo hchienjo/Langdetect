@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Language Detector</title>
+        <link href="{{ url_for('static',filename='css/w3.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/font-awesome.min.css') }}" rel="stylesheet">
+        
+        
+    </head>
+    <body>
+        <header class="w3-container w3-green" >
+            <div class="w3-center">
+                <i class="fa fa-comment"style="font-size:180px"></i>
+                <h1>Language Dectector</h1>
+            </header>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-quarter">
+                <p>
+                </p>
+            </div>
+            <div class="w3-container w3-half">
+                <br />
+                <br />
+                <form   action="/compute" method="post" role="form" enctype="multipart/form-data">
+                    <label style="font-size:20px"class="w3-label w3-text-green">
+                    Use longer sentencs for better results
+                    </label>
+                    <input style="height:80px;font-size:17pt;" class="w3-input w3-border" type="text" placeholder="Enter a sentence with at least 5 letters" "required" name="word" id="name">
+                    <br />
+                    <div class="w3-center">
+                        <button style="height:50px;width:200px" class="w3-btn w3-green" type="submit" >
+                        <i class="fa fa-cog" style="font-size:30px"></i> <span  style="font-size:20px">Detect</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+<footer class="w3-container w3-padding-32 w3-center">
+<p class="w3-text-green"><i>By Charlton Asino==><i class="fa fa-send-o" style="font-size:30px"></i>email:asino4charlton@gmail.com<i><p><div style="position:relative;bottom:103px;z-index:1;" class="w3-tooltip w3-right">
+</div>                
+</footer>
+    </body>
+
+</html>
