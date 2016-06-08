@@ -12,7 +12,7 @@ def show_home():
     return render_template('home.html')
 
 
-@app.route('/compute', methods=['POST', 'GET'])
+@app.route('/compute', methods=['POST'])
 def result():
     '''
     Get language,reliabilty percentage and match
