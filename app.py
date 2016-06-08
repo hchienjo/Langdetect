@@ -15,7 +15,7 @@ def show_home():
 @app.route('/compute', methods=['POST', 'GET'])
 def result():
     '''
-    Get language,reliabilty percenatge and match
+    Get language,reliabilty percentage and match
     '''
     if request.method == 'POST':
         if not request.form['word']:
