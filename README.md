@@ -11,7 +11,8 @@ Pycld2
 http://langdetect.pythonanywhere.com/api/
 ####Usage
 Exmaple to check "habari yako"
-langdetect.pythonanywhere.com/api/habari+yako
+langdetect.pythonanywhere.com/api/habari+yako  
+
 returns:
       {
   "lang": "SWAHILI",
