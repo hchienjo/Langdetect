@@ -1,4 +1,4 @@
-from flask import Flask, request, url_for, render_template, redirect
+from flask import Flask, request, url_for, render_template, redirect, jsonify
 import pycld2 as cld2
 
 app = Flask(__name__)
@@ -25,8 +25,8 @@ def result():
         reliability = (get1)
         lang = (get3[0][0])
         match = ('{0:.4f} %'.format(get3[0][2]))
-        return render_template('find.html', reliability=reliability,
-                               lang=lang, match=match)
+        output = {'reliablity': reliability, 'lang': lang, 'match': match}
+        return render_template('find.html', **output)
 
 
 if __name__ == '__main__':
