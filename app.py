@@ -12,10 +12,10 @@ def show_home():
     return render_template('home.html')
 
 
-@app.route('/compute', methods=['POST', 'GET'])
+@app.route('/compute', methods=['POST'])
 def result():
     '''
-    Get language,reliabilty percenatge and match
+    Get language,reliabilty percentage and match
     '''
     if request.method == 'POST':
         if not request.form['word']:
@@ -25,7 +25,8 @@ def result():
         reliability = (get1)
         lang = (get3[0][0])
         match = ('{0:.4f} %'.format(get3[0][2]))
-        return render_template('find.html', reliability=reliability, lang=lang, match=match)
+        return render_template('find.html', reliability=reliability,
+                               lang=lang, match=match)
 
 
 if __name__ == '__main__':
