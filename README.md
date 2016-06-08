@@ -8,10 +8,10 @@ Built with w3.css and fontawesome
 Pycld2
 
 ##API
-http://langdetect.pythonanywhere.com/api/
-####Usage
+urlname/api/
+####Usage  
 Exmaple to check "habari yako"
-langdetect.pythonanywhere.com/api/habari+yako  
+l27.0.0.1:5000/api/habari+yako  
 
 returns:
       {
@@ -23,6 +23,7 @@ returns:
 The + sign represents spaces
 
 ###Link
-http://langdetect.pythonanywhere.com/
+http://langdetect.pythonanywhere.com/  
+The API will not  work since the hosting profile used does not allow external communication
 
 
