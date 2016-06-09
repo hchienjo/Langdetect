@@ -31,8 +31,14 @@ def result():
 
 @app.route('/api/<string:sentence>', methods=['GET'])
 def apiResult(sentence):
-    '''
-    Returns JSON format form data.Sentence is passed to url with + to act as spaces ie "habari+yako"
+    '''Checks the language of sentence.
+
+    Returns JSON response that looks like this
+        {
+        "lang": "SWAHILI",
+        "match": "95.0000 %",
+        "reliablity": true
+        }
     '''
     cleanSentence = sentence.split('+')
     cleanSentence = ' '.join(cleanSentence)
