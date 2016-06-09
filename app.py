@@ -29,7 +29,7 @@ def result():
         return render_template('find.html', **output)
 
 
-@app.route('/api/<string:sentence>', methods=['GET'])
+@app.route('/api/<string:sentence>/', methods=['GET'])
 def apiResult(sentence):
     '''Checks the language of sentence.
 
